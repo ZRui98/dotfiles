@@ -1,0 +1,71 @@
+border.width: 0
+padding.width: 3
+padding.height: 3
+window.handle.width: 0
+window.client.padding.width: 0
+menu.overlap: 0
+*.justify: left
+
+
+menu.border.color: #9DE0D8
+menu.border.width: 0
+
+menu.title.bg: solid flat
+menu.title.bg.color: #9DE0D8
+menu.title.text.color: #ffffff
+
+menu.items.bg: Flat Solid
+menu.items.bg.color: #ffffff
+menu.items.text.color: #89d9d0
+
+menu.items.active.bg: Flat Solid
+menu.items.active.bg.color: #89D9D0
+menu.items.active.text.color: #ffffff
+
+menu.separator.width: 1
+menu.separator.padding.width: 0
+menu.separator.padding.height: 0
+menu.separator.color: #ffffff
+window.*.handle.bg: Flat Solid
+window.*.handle.bg.color: #9DE0D8
+
+window.*.grip.bg: Flat Solid
+window.*.grip.bg.color: #9DE0D8
+
+
+window.active.border.color: #9DE0D8
+window.active.title.separator.color: #3DAEE9
+
+*.title.bg: Flat Solid
+*.title.bg.color: #9DE0D8
+
+window.active.label.bg: Parentrelative
+window.active.label.text.color: #ffffff
+
+window.active.button.unpressed.bg: Parentrelative
+window.active.button.unpressed.image.color: #ffffff
+window.active.button.hover.bg: Parentrelative
+window.active.button.hover.image.color: #3DAEE9
+window.active.button.pressed.bg: Parentrelative
+window.active.button.pressed.image.color: #3DAEE9
+window.active.button.disabled.bg: Parentrelative
+window.active.button.disabled.bg.color: #dfdfdf
+window.active.button.disabled.bg.colorTo: #dfdfdf
+window.active.button.disabled.image.color: #ff0000
+window.active.button.hover.bg.border.color: #dedede
+
+window.inactive.border.color: #cccccc
+window.inactive.title.separator.color: #cccccc
+
+window.inactive.title.bg: Solid Flat
+window.inactive.title.bg.color: #DDDDDD
+window.inactive.label.bg: Parentrelative
+window.inactive.label.text.color: #ffffff
+
+window.inactive.button.unpressed.bg: Parentrelative
+window.inactive.button.unpressed.image.color: #ffffff
+window.inactive.button.hover.image.color: #3DAEE9
+window.inactive.button.pressed.image.color: #3DAEE9
+window.inactive.button.pressed.bg: flat solid
+window.inactive.button.pressed.bg.color: #dfdfdf
+window.inactive.button.pressed.bg.colorTo: #dfdfdf

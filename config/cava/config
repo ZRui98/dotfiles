@@ -1,0 +1,16 @@
+[input]
+method = fifo
+source = /tmp/mpd.fifo
+framerate = 60
+bar_width = 2
+
+[color]
+gradient=1
+gradient_color_1= '#85D5CC'
+gradient_color_2= '#BBFDD5'
+
+[smoothing]
+integral = 75
+monstercat = 1
+waves = 0
+gravity = 150

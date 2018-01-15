@@ -1,0 +1,28 @@
+[options]
+font = Inconsolata NerdFont 10.4
+[colors]
+background 	=	rgba(255,255,255,0.95)
+foreground	=	#3B444B
+color0		=	#FFFFFF
+color8		=	#97E298
+
+color1		=	#86BDB9
+color9		=	#61A249
+
+color2		=	#9DE0D8
+color10		=	#89D9D0
+
+color3		=	#D9C26C
+color11		=	#00840A
+
+color4		=	#97D598
+color12		=	#03529E
+
+color5		=	#BB3035
+color13		=	#E4A9A7
+
+color6		=	#87AF00
+color14		=	#A271C5
+
+color7		=	#1B8BAD
+color15		=	#2FB6C7

@@ -1,0 +1,14 @@
+compton --dbus  --vsync opengl&
+amixer -c 0 set Headphone 100%&
+nm-applet &
+redshift&
+clipit&
+feh --bg-fill ~/Pictures/gow-wall.png &
+acpid&
+mpd&
+ac-light&
+xset s off -dpms&
+sleep 0.3
+i3lock -n -e  -i ~/Pictures/gow-wall3.png
+tint2 &> /dev/null
+xrdb -merge ~/.Xresources 

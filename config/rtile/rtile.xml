@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<gaps top="32" bottom="0" left="7" right="7" windows_x="5" windows_y="5"/>
+	<columns max_size_main="2" max_size="4" max_count="3"/>
+
+	<workspace id="2" median="0.505" reverse_x="false" reverse_y="false"/>
+	<workspace id="3" median="0.55" reverse_x="false" reverse_y="false"/>
+	<workspace id="4" median="0.57" reverse_x="false" reverse_y="false"/>
+
+	<!--<window class="<class>" priority="high|low" floating="true|false" fake_windows="1|2|3|..."/>-->
+	<column_config windows="1" workspace="all" column_sizes="1"/>
+	<column_config windows="2" workspace="all" column_sizes="1, 1"/>
+	<column_config windows="3" workspace="all" column_sizes="1, 2"/>
+	<column_config windows="4" workspace="all" column_sizes="1, 3"/>
+	<column_config windows="5" workspace="all" column_sizes="2, 3"/>
+	<column_config windows="6" workspace="all" column_sizes="2, 4"/>
+	<column_config windows="7" workspace="all" column_sizes="1, 2, 4"/>
+	<column_config windows="8" workspace="all" column_sizes="3, 2, 3"/>
+</settings>
