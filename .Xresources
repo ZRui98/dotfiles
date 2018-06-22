@@ -1,0 +1,28 @@
+st.font: 			mononoki NerdFont:pixelsize=13:antialias=true:autohint=true;
+st.opacity: 		245
+st.cwscale: 		0.94
+st.chscale: 		0.82
+st.borderpx: 		2
+st.bold_font: 		1
+st.xfps: 			60
+st.actionfps: 		60
+
+*.background: 		#F1F1F1
+*.foreground: 		#3B444B
+*.color0:			#FFFFFF
+*.color1:			#86BDB9
+*.color2:			#9DE0D8
+*.color3:			#D9C26C
+*.color4:			#97D598
+*.color5:			#BB3035
+*.color6:			#87AF00
+*.color7:			#1B8BAD
+
+*.color8:			#97E298
+*.color9:			#61A249
+*.color10:			#89D9D0
+*.color11:			#00840A
+*.color12:			#03529E
+*.color13:			#E4A9A7
+*.color14:			#A271C5
+*.color15:			#2FB6C7

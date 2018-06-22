@@ -1,0 +1,110 @@
+set number
+color peachpuff
+syntax on
+filetype on
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set smartindent
+set clipboard=unnamedplus
+set backspace=indent,eol,start
+set t_Co=256
+inoremap jk <Esc> 
+inoremap kj <Esc> 
+noremap<F2> :set number!<CR>
+noremap<F3> :set relativenumber!<CR>
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+let g:latex_view_general_viewer = 'zathura'
+let g:vimtex_view_method = "zathura"
+let g:tex_flavor = "latex"
+let g:vimtex_compiler_latexmk = {'callback' : 0}
+
+" =============================================================================
+" Filename: autoload/lightline/colorscheme/PaperColor_light.vim
+" Author: TKNGUE
+" License: MIT License
+" Last Change: 2015/07/28 07:46:40.
+" =============================================================================
+
+let s:pink = '#E4A9A7'
+let s:green = '#97D5AA'
+let s:teal = '#9DE0D8'
+let s:olive = '#87AF00'
+let s:red = '#AA0000'
+let s:yellow = '#D9C26C'
+let s:white = '#ffffff'
+let s:grey = '#eeeeee'
+
+let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
+let s:p.normal.left = [ [ s:white, s:teal ], [ s:green, s:grey ] ]
+let s:p.normal.right = [ [ s:green, s:grey],[s:grey, s:red]]
+let s:p.normal.middle = [ [ s:white, s:olive]]
+let s:p.insert.left = [ [ s:white, s:yellow ], [ s:green, s:grey ] ]
+let s:p.replace.left = [ [ s:white, s:red ], [s:green, s:grey ] ]
+let s:p.visual.left = [ [ s:white, s:pink ], [s:green, s:grey ] ]
+let s:p.normal.error = [ [ s:red, s:grey ] ]
+let s:p.normal.warning = [ [ s:yellow, s:grey ] ]
+
+let g:lightline#colorscheme#lustre#palette = lightline#colorscheme#fill(s:p)
+
+set laststatus=2
+set noshowmode
+let g:lightline = {
+  \ 'colorscheme': 'lustre',
+  \ 'active': {
+  \   'left': [['mode', 'paste'], ['filename', 'modified']],
+  \   'right': [ ['linter_ok'], ['linter_warnings'], ['linter_errors'],['readonly'], ['lineinfo'], ['percent'] ]
+  \ },
+  \ 'component_expand': {
+  \   'linter_warnings': 'LightlineLinterWarnings',
+  \   'linter_errors': 'LightlineLinterErrors',
+  \   'linter_ok': 'LightlineLinterOK'
+  \ },
+  \ 'component_type': {
+  \   'readonly': 'error',
+  \   'linter_warnings': 'warning',
+  \   'linter_errors': 'error'
+  \ },
+  \ }
+
+function! LightlineLinterWarnings() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ', all_non_errors)
+endfunction
+
+function! LightlineLinterErrors() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ', all_errors)
+endfunction
+
+function! LightlineLinterOK() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : ''
+endfunction
+call lightline#update()
+autocmd User ALELint call lightline#update()
+ 
+let g:ale_list_window_size = 4
+let g:ale_lint_on_save=1
+let g:ale_lint_on_text_changed='never'
+hi ALEErrorSign ctermfg=5 ctermbg=none
+let g:ale_sign_warning='●'
+hi ALEWarningSign ctermfg=3 ctermbg=none
+let g:ale_sign_error='●'
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetsDir=$HOME.'/UltiSnips'
+let g:UltiSnipsSnippetDirectories=[$HOME.'/UltiSnips']
+hi Visual term=none cterm=none ctermbg=254
+hi SignColumn cterm=none ctermbg=none

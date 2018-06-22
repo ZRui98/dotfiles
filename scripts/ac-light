@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+STATE=""
+while :
+do
+    NEW_STATE=$(acpi | awk -F [\ ,] '{print $3}')
+	if [ "$NEW_STATE" != "$STATE" ]; then
+		STATE=$NEW_STATE
+		if [ "$STATE" = "Discharging" ]; then
+			light -S 25
+		else 
+			light -S 100
+			notify-desktop "Connected to AC" "$(acpi|awk -F "," '{print $3}')"
+		fi
+	fi
+	sleep 1
+done

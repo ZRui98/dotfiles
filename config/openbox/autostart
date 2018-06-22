@@ -1,14 +1,13 @@
-compton --dbus  --vsync opengl&
-amixer -c 0 set Headphone 100%&
+/home/ciguatera/scripts/lock &> /dev/null 
+feh --bg-fill ~/Pictures/gow-wall.png  &
+dunst &
+amixer -c 0 set Headphone 100% &
+amixer -c 0 set Mic 100% &
+clipit &
+tint2 &> /dev/null &
+mpd &
+/home/ciguatera/scripts/ac-light &
+xss-lock -- /home/ciguatera/scripts/lock &
+xset s off -dpms &
 nm-applet &
-redshift&
-clipit&
-feh --bg-fill ~/Pictures/gow-wall.png &
-acpid&
-mpd&
-ac-light&
-xset s off -dpms&
-sleep 0.3
-i3lock -n -e  -i ~/Pictures/gow-wall3.png
-tint2 &> /dev/null
-xrdb -merge ~/.Xresources 
+xrdb -merge ~/.Xresources

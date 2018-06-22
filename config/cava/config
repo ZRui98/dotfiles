@@ -1,8 +1,11 @@
-[input]
-method = fifo
-source = /tmp/mpd.fifo
+[general]
 framerate = 60
-bar_width = 2
+bar_width = 1
+bar_spacing = 1
+
+[input]
+method = pulse
+source = auto
 
 [color]
 gradient=1

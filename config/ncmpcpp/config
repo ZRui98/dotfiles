@@ -31,18 +31,17 @@ colors_enabled				="yes"
 playlist_display_mode			="columns"
 browser_display_mode			="classic"
 browser_playlist_prefix			="Playlist: "
-discard_colors_if_item_is_selected	="yes"
-progressbar_look			="─╼ "
-#progressbar_boldness			="yes"
+discard_colors_if_item_is_selected	=yes
+progressbar_look			="—o "
+
 header_window_color			= 110
-volume_color				="9"
+volume_color				=9
 state_flags_color 			= 7
 main_window_color 			= 4
 statusbar_color				= 7
+
 display_remaining_time			= no
-#header_visibility 			= no
-#
 statusbar_visibility 			= yes
-#
 titles_visibility 			= no
 state_line_color = red
+

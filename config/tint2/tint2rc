@@ -19,8 +19,8 @@ border_color_pressed = #ffffff 42
 # Background 2: Default task, Iconified task
 rounded = 0
 border_width = 0
-border_sides = B
-background_color = #aaaaaa 35
+border_sides = B 
+background_color = #aaaaaa 35 
 border_color = #ffffff 35
 background_color_hover = #aaaaaa 10
 border_color_hover = #ffffff 35
@@ -64,7 +64,7 @@ border_color_pressed = #000000 40
 rounded = 0
 border_width = 0
 border_sides = B
-background_color = #ffffff 30
+background_color = #ffffff 50
 border_color = #89D8D0 70
 background_color_hover = #ffffff 30
 border_color_hover = #ffffff 30
@@ -100,9 +100,9 @@ border_sides = B
 background_color = #8AD9D1 70
 
 # Panel
-panel_items = TSEEEEEECP
-panel_size = 1352 22
-panel_margin = 0 6 
+panel_items = TSEEEEECP
+panel_size = 1355 24
+panel_margin = 5 5
 panel_padding = 0 0 0
 panel_background_id = 1
 wm_menu = 1
@@ -151,9 +151,9 @@ task_icon = 0
 task_centered = 1
 urgent_nb_of_blink = 100000
 task_maximum_size = 115 25
-task_padding = 10 0 0
+task_padding = 10 10 10 0
 task_tooltip = 1
-task_font = Inconsolata NerdFont bold 10
+task_font = Inconsolata bold 11
 task_font_color = #ffffff 100
 task_active_font_color = #ffffff 100
 task_background_id = 2
@@ -195,74 +195,66 @@ launcher_item_app = /usr/share/applications/google-chrome.desktop
 
 #-------------------------------------
 # Clock
-time1_font=Inconsolata NerdFont bold 10
-time1_format =  %H:%M 
+time1_font=Inconsolata bold 10
+time1_format =  | :%H:%M 
 time1_timezone = 
 time2_timezone = 
 clock_font_color = #97D5AA 100
 clock_padding = 5 0 0
 clock_background_id = 6
-clock_tooltip = 
+clock_tooltip = %A %B %d %Y
 clock_tooltip_timezone = 
-clock_lclick_command = gsimplecal
+clock_lclick_command = urxvtc
 clock_rclick_command = 
 clock_mclick_command = 
 clock_uwheel_command = 
 clock_dwheel_command = 
 
+# Executor 0
 #-------------------------------------
-# Executor
 execp = new
-execp_font = Inconsolata NerdFont bold 10
+execp_font = Inconsolata bold 10
 execp_font_color = #DBDEE0 100
 execp_background_id = 9
 execp_centered = 1
 execp_padding = 5 0 0
-execp_interval = 5
 execp_continuous = 0
-execp_lclick_command=toggle-redshift
+execp_lclick_command = /home/ciguatera/scripts/toggle-redshift
 execp_command = bash -c 'if [ "$(pidof redshift)" == "" ]; then echo ; else echo ; fi'
-#-------------------------------------
-# Executor
-execp = new
-execp_font = Inconsolata NerdFont bold 10
-execp_font_color = #FFFFFF 100
-execp_background_id = 9
-execp_centered = 1
-execp_padding = 5 0 0
-execp_interval = 1
-execp_continuous = 0
-execp_command = if [ "$(pgrep -x rtile.rb|wc -l)" == "0" ]; then echo "";else echo ; fi
-#-------------------------------------
+
 # Executor 1
+#-------------------------------------
 execp = new
 execp_background_id = 8
 execp_command= mpc status | awk 'NR==2{if($1=="[playing]"){printf "  "}else{printf "  "};$system("s=$(mpc current);echo \"$s \"");exit;}'
 execp_interval=3
 execp_continuous=0
 execp_font_color = #ffffff 100
-execp_font = Inconsolata NerdFont 10
+execp_font =Inconsolata 10
+execp_tooltip= 
 
 #-------------------------------------
 # Executor 2
 execp = new
 execp_background_id = 10
-execp_command = free --mega| awk '/Mem:/ {printf " Mem: %dMb ",$3;exit;}'
+execp_command = free --mega| awk '/Mem:/ {printf(" RAM:%dMb  ",$3);}'
 execp_interval=5
+execp_has_icon=0
 execp_continuous=0
 execp_font_color = #FFFFFF 100
-execp_font=Inconsolata NerdFont bold 10
-execp_padding = 0 0
+execp_font=Inconsolata bold 10
+execp_padding = 0 0 0
 execp_centered = 1
 execp_icon_w = 0
 execp_icon_h = 0
+execp_tooltip= 
 
 #-------------------------------------
 # Executor 3
 execp = new
 execp_background_id = 6
-execp_font=Inconsolata NerdFont bold 10
-execp_command = amixer -c 0 sget Master| awk -F"[][]" '/%/ {if($6=="off" || $4=="off"){print " : X "}else{printf " : %d%% ", $2;system("amixer -c 0  set Headphone on &> /dev/null");system("amixer -c 0 set Speaker on &> /dev/null");};exit;}'
+execp_font=Inconsolata bold 10
+execp_command = amixer -c 0 sget Master| awk -F"[][]" '/%/ {if($6=="off" || $4=="off"){printf " : X "}else{printf(" %s%s ",":", $2);system("amixer -c 0  set Headphone on &> /dev/null");system("amixer -c 0 set Speaker on &> /dev/null");};print("|");exit;}'
 execp_interval = 1
 execp_has_icon = 0
 execp_cache_icon = 1
@@ -278,6 +270,7 @@ execp_padding = 0 0
 execp_centered = 1
 execp_icon_w = 0
 execp_icon_h = 0
+execp_tooltip= 
 
 #-------------------------------------
 # Executor 4
@@ -286,8 +279,9 @@ execp_background_id = 6
 execp_interval=5
 execp_continuous=0
 execp_font_color = #97D5AA 100
-execp_font=Inconsolata NerdFont bold 10
-execp_command= acpi -b | awk -F"[ ,%]" '{if($3=="Discharging"){printf ($5>87)? " : " : ($5>62)? " : " : ($5>37)? " : " : " : ";printf "%d%% ",$5}else{printf " : %d%% ",$5;};exit;}'
+execp_font=Inconsolata bold 10
+execp_tooltip= 
+execp_command= acpi -b | awk -F"[ ,%]" '{if($3=="Discharging"){printf ($5>87)? " : " : ($5>62)? " : " : ($5>37)? " : " : " : ";printf "%d%s ",$5,"%"}else{printf " :%s%s ",$5,"%";};exit;}'
 
 #-------------------------------------
 # Button 2
@@ -298,7 +292,7 @@ button_font_color = #E4A9A7 100
 button_background_id = 7
 button_centered = 1
 button_padding = 5 0 0
-button_lclick_command= tint2 -c .config/tint2/powertint2rc
+button_lclick_command= bash -c '/home/ciguatera/scripts/bar | lemonbar -p -g 130x25+1230+35 -B "#DDFFFFFF" -F "#000000" -f FontAwesome 24 |sh'
 #-------------------------------------
 # Tooltip
 tooltip_show_timeout = 0.5

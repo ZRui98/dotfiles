@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+PID=$(pidof redshift)
+if [ "$PID" = "" ]; then
+	systemctl --user start redshift.service
+	notify-desktop "Redshift on"
+else
+	systemctl --user stop redshift.service
+	notify-desktop "Redshift off"
+fi
