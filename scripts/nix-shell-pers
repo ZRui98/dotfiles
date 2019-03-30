@@ -1,0 +1,8 @@
+#! /bin/sh -eu
+
+# make gcroot for each dependency of shell and run nix-shell
+
+mkdir -p .gcroots
+nix-instantiate shell.nix --indirect --add-root $PWD/.gcroots/shell.drv
+nix-store --indirect --add-root $PWD/.gcroots/shell.dep --realise $(nix-store --query --references $PWD/.gcroots/shell.drv)
+exec nix-shell $(readlink $PWD/.gcroots/shell.drv)

@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Planetes</name>
+    <name>Terracotta</name>
     <titleLayout>LIMD</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -209,25 +209,25 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Left">
+    <keybind key="S-A-h">
       <action name="SendToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Right">
+    <keybind key="S-A-l">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Up">
+    <keybind key="S-A-k">
       <action name="SendToDesktop">
         <to>up</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Down">
+    <keybind key="S-A-j">
       <action name="SendToDesktop">
         <to>down</to>
         <wrap>no</wrap>
@@ -286,7 +286,7 @@
     <keybind key="W-F11">
       <action name="ToggleFullscreen"/>
     </keybind>
-    <keybind key="W-d">
+    <keybind key="W-v">
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Keybindings for windows -->
@@ -340,25 +340,25 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
+    <keybind key="W-S-l">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
         <dialog>no</dialog>
       </action>
     </keybind>
-    <keybind key="W-S-Left">
+    <keybind key="W-S-h">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
         <dialog>no</dialog>
       </action>
     </keybind>
-    <keybind key="W-S-Up">
+    <keybind key="W-S-k">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
         <dialog>no</dialog>
       </action>
     </keybind>
-    <keybind key="W-S-Down">
+    <keybind key="W-S-j">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
         <dialog>no</dialog>
@@ -412,7 +412,7 @@
     </keybind>
     <keybind key="XF86ScreenSaver">
       <action name="Execute">
-		<command>/home/ciguatera/scripts/lock</command>
+        <command>/home/ciguatera/scripts/lock</command>
       </action>
     </keybind>
     <keybind key="Print">
@@ -428,29 +428,49 @@
         <height>730</height>
       </action>
     </keybind>
-	<keybind key="W-S-h">
-  		<action name="MoveRelative">
-    		<x>-14</x>
-    		<y>0</y>
-  		</action>
+    <keybind key="W-S-a">
+      <action name="MoveToEdge">
+        <direction>west</direction>
+      </action>
     </keybind>
-	<keybind key="W-S-l">
-  		<action name="MoveRelative">
-    		<x>14</x>
-    		<y>0</y>
-  		</action>
+    <keybind key="W-S-s">
+      <action name="MoveToEdge">
+        <direction>north</direction>
+      </action>
     </keybind>
-	<keybind key="W-S-k">
-  		<action name="MoveRelative">
-    		<x>0</x>
-    		<y>-14</y>
-  		</action>
+    <keybind key="W-S-d">
+      <action name="MoveToEdge">
+        <direction>south</direction>
+      </action>
     </keybind>
-	<keybind key="W-S-j">
-  		<action name="MoveRelative">
-    		<x>0</x>
-    		<y>14</y>
-  		</action>
+    <keybind key="W-S-f">
+      <action name="MoveToEdge">
+        <direction>east</direction>
+      </action>
+    </keybind>
+    <keybind key="W-a">
+      <action name="MoveRelative">
+        <x>-14</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="MoveRelative">
+        <x>14</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-s">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>-14</y>
+      </action>
+    </keybind>
+    <keybind key="W-d">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>14</y>
+      </action>
     </keybind>
     <keybind key="W-h">
       <action name="MoveResizeTo">
@@ -484,115 +504,99 @@
         <height>370</height>
       </action>
     </keybind>
-	<keybind key="W-A-h">  
-		<action name="ResizeRelative">
-			<left>14</left>
-	  	</action>
+    <keybind key="W-A-h">
+      <action name="ResizeRelative">
+        <left>14</left>
+      </action>
     </keybind>
     <keybind key="W-A-l">
-		<action name="ResizeRelative">
-			<right>14</right>
-	  	</action>
+      <action name="ResizeRelative">
+        <right>14</right>
+      </action>
     </keybind>
     <keybind key="W-A-k">
-		<action name="ResizeRelative">
-			<top>14</top>
-	  	</action>
+      <action name="ResizeRelative">
+        <top>14</top>
+      </action>
     </keybind>
-	<keybind key="W-A-j">
-	  	<action name="ResizeRelative">
-			<bottom>14</bottom>
-	  	</action>
+    <keybind key="W-A-j">
+      <action name="ResizeRelative">
+        <bottom>14</bottom>
+      </action>
     </keybind>
-	<keybind key="W-A-z">
-		<keybind key="h">
-			<action name="Execute">
-				<command>/home/ciguatera/scripts/window-resize -c w -d r</command>
-		  	</action>
-		</keybind>
-		<keybind key="l">
-			<action name="Execute">
-				<command>/home/ciguatera/scripts/window-resize -c w -d l</command>
-		  	</action>
-		</keybind>
-		<keybind key="k">
-		  	<action name="Execute">
-				<command>/home/ciguatera/scripts/window-resize -c w -d t</command>
-		  	</action>
-		</keybind>
-		<keybind key="j">
-		  	<action name="Execute">
-				<command>/home/ciguatera/scripts/window-resize -c w -d b</command>
-		  	</action>
-		</keybind>
-	</keybind>
-	<keybind key="W-C-h">  
-		<action name="ResizeRelative">
-			<left>-14</left>
-	  	</action>
+    <keybind key="W-A-z">
+      <keybind key="l">
+        <action name="Execute">
+          <command>/home/ciguatera/scripts/window-resize -c w -d r</command>
+        </action>
+      </keybind>
+      <keybind key="h">
+        <action name="Execute">
+          <command>/home/ciguatera/scripts/window-resize -c w -d l</command>
+        </action>
+      </keybind>
+      <keybind key="k">
+        <action name="Execute">
+          <command>/home/ciguatera/scripts/window-resize -c w -d t</command>
+        </action>
+      </keybind>
+      <keybind key="j">
+        <action name="Execute">
+          <command>/home/ciguatera/scripts/window-resize -c w -d b</command>
+        </action>
+      </keybind>
     </keybind>
     <keybind key="W-C-l">
-		<action name="ResizeRelative">
-			<right>-14</right>
-	  	</action>
+      <action name="ResizeRelative">
+        <left>-14</left>
+      </action>
+    </keybind>
+    <keybind key="W-C-h">
+      <action name="ResizeRelative">
+        <right>-14</right>
+      </action>
+    </keybind>
+    <keybind key="W-C-j">
+      <action name="ResizeRelative">
+        <bottom>-14</bottom>
+      </action>
     </keybind>
     <keybind key="W-C-k">
-		<action name="ResizeRelative">
-			<bottom>-14</bottom>
-	  	</action>
+      <action name="ResizeRelative">
+        <top>-14</top>
+      </action>
     </keybind>
-	<keybind key="W-C-j">
-	  	<action name="ResizeRelative">
-			<top>-14</top>
-	  	</action>
+    <keybind key="W-C-z">
+      <keybind key="h">
+        <action name="Execute">
+          <command>/home/ciguatera/scripts/window-resize -c -h -d r</command>
+        </action>
+      </keybind>
+      <keybind key="l">
+        <action name="Execute">
+          <command>/home/ciguatera/scripts/window-resize -c -h -d l</command>
+        </action>
+      </keybind>
+      <keybind key="k">
+        <action name="Execute">
+          <command>/home/ciguatera/scripts/window-resize -c -h -d t</command>
+        </action>
+      </keybind>
+      <keybind key="j">
+        <action name="Execute">
+          <command>/home/ciguatera/scripts/window-resize -c -h -d b</command>
+        </action>
+      </keybind>
     </keybind>
-	<keybind key="W-C-z">
-		<keybind key="h">
-		  <action name="Execute">
-			<command>/home/ciguatera/scripts/window-resize -c -h -d r</command>
-		  </action>
-		</keybind>
-		<keybind key="l">
-		  <action name="Execute">
-			<command>/home/ciguatera/scripts/window-resize -c -h -d l</command>
-		  </action>
-		</keybind>
-		<keybind key="k">
-		  <action name="Execute">
-			<command>/home/ciguatera/scripts/window-resize -c -h -d t</command>
-		  </action>
-		</keybind>
-		<keybind key="j">
-		  <action name="Execute">
-			<command>/home/ciguatera/scripts/window-resize -c -h -d b</command>
-		  </action>
-		</keybind>
-	</keybind>
     <keybind key="W-b">
       <action name="Execute">
         <command>/usr/local/bin/rtile.rb --swap-biggest</command>
       </action>
     </keybind>
-	<keybind key="W-q">
-		<action name="MoveToEdge"><direction>west</direction></action>
-		<action name="MoveToEdge"><direction>north</direction></action>
-    </keybind>
-    <keybind key="W-w">
-		<action name="MoveToEdge"><direction>east</direction></action>
-		<action name="MoveToEdge"><direction>north</direction></action>
-    </keybind>
-    <keybind key="W-a">
-		<action name="MoveToEdge"><direction>west</direction></action>
-		<action name="MoveToEdge"><direction>south</direction></action>
-    </keybind>
-    <keybind key="W-s">
-		<action name="MoveToEdge"><direction>east</direction></action>
-		<action name="MoveToEdge"><direction>south</direction></action>
-    </keybind>
     <keybind key="A-d">
       <action name="ToggleDecorations"/>
     </keybind>
-    <keybind key="W-f">
+    <keybind key="W-g">
       <action name="ToggleAlwaysOnTop"/>
     </keybind>
     <keybind key="W-m">
@@ -1053,9 +1057,10 @@
 
   # end of the example
 -->
-    <application class="Termite">
+    <application class=".zathura-wrapped_">
+      <decor>no</decor>
     </application>
-    <application class="Zathura">
+    <application class="calcurse">
       <decor>no</decor>
     </application>
     <application class="Firefox">
@@ -1069,14 +1074,10 @@
     </application>
     <application class="VirtualBox Machine">
       <decor>no</decor>
-      <maximized>false</maximized>
+      <maximized>true</maximized>
     </application>
     <application class="mpv">
       <decor>no</decor>
-      <position>
-        <x>center</x>
-        <y>center</y>
-      </position>
     </application>
   </applications>
 </openbox_config>

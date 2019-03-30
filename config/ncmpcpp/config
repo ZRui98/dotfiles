@@ -1,5 +1,3 @@
-
-##
 ## - 0 - default window color (discards all other colors)
 ## - 1 - black
 ## - 2 - red
@@ -14,34 +12,30 @@
 ## - u - underline text
 ## - r - reverse colors
 ## - a - use alternative character set
-##
-mpd_host				="127.0.0.1"
-mpd_port				="6600"
-mpd_music_dir				="~/Music"
-ncmpcpp_directory			="~/.config/ncmpcpp"
-mpd_connection_timeout 			="5"
-user_interface				="classic"
-song_columns_list_format		= "   (56)[9]{t} (38f)[3]{a}  (5f)[107]{l} "
-song_list_format			="{$5%t}  >>{$3%a}|{$8%f}  >>{$7%l$7}"
-current_item_prefix			="$r$b"
-current_item_suffix			="$/b$/r"
-now_playing_prefix			="$b$(183)>> "
-now_playing_suffix			="$/b"
-colors_enabled				="yes"
-playlist_display_mode			="columns"
-browser_display_mode			="classic"
-browser_playlist_prefix			="Playlist: "
-discard_colors_if_item_is_selected	=yes
-progressbar_look			="—o "
+mpd_host							= "127.0.0.1"
+mpd_port							= "6600"
+mpd_music_dir						= "/home/ciguatera/Music"
+ncmpcpp_directory					= "~/.config/ncmpcpp"
+mpd_connection_timeout 				= "5"
+user_interface						= "classic"
+song_columns_list_format			= "(15)[9]{t}(40f)[16]{a}(6f)[14]{lr} "
+song_list_format 					= "{$(2)%a - $(153)%t}{$R$(15)%l}"
+now_playing_prefix					= "$b$(15)>> "
+now_playing_suffix					= "$/b"
+colors_enabled						= "yes"
+playlist_display_mode				= "columns"
+browser_display_mode				= "classic"
+browser_playlist_prefix				= "Playlist: "
+discard_colors_if_item_is_selected 	= yes
+progressbar_look 					= " "
 
-header_window_color			= 110
-volume_color				=9
-state_flags_color 			= 7
-main_window_color 			= 4
-statusbar_color				= 7
+header_window_color					= 110
+volume_color						= 9
+state_flags_color 					= 7
+main_window_color 					= 4
+statusbar_color						= 7
 
-display_remaining_time			= no
-statusbar_visibility 			= yes
-titles_visibility 			= no
-state_line_color = red
-
+display_remaining_time				= no
+statusbar_visibility 				= yes
+titles_visibility 					= no
+state_line_color 					= red

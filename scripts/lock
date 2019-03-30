@@ -4,8 +4,8 @@ i3lock-color -n -i /home/ciguatera/Pictures/lock.png \
     --insidecolor=373445ff --ringcolor=ffffffff --line-uses-inside \
     --keyhlcolor=d23c3dff --bshlcolor=d23c3dff --separatorcolor=00000000 \
     --insidevercolor=fecf4dff --insidewrongcolor=d23c3dff \
-    --ringvercolor=ffffffff --ringwrongcolor=ffffffff --indpos="x+66:y+705" \
-    --radius=27 --indicator\
-	--timecolor="cc0000ff" --datecolor="ffffffff" --timepos="-20:600" --clock \
-	--veriftext="" --wrongtext=""
+    --ringvercolor=ffffffff --ringwrongcolor=ffffffff  --radius=30 \
+	--indicator --timecolor="cc0000ff" --datecolor="ffffffff" --clock \
+	--timepos="x+200:y+702" --indpos="x+76:y+705" --veriftext="" \
+	--wrongtext="" --noinputtext=""
 pkill -u $USER -USR2 dunst
