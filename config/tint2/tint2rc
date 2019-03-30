@@ -9,95 +9,94 @@
 rounded = 0
 border_width =
 border_sides = B
-background_color = #ffffff 85
+background_color = #EDEFDF 100
 border_color = #89D9D0 0
-background_color_hover = #ffffff 85
-border_color_hover = #ffffff 100
-background_color_pressed = #ffffff 85
-border_color_pressed = #ffffff 42
+background_color_hover = #EDEFDF 85
+border_color_hover = #EDEFDF 100
+background_color_pressed = #EDEFDF 85
+border_color_pressed = #EDEFDF 42
 
 # Background 2: Default task, Iconified task
 rounded = 0
 border_width = 0
 border_sides = B 
-background_color = #aaaaaa 35 
-border_color = #ffffff 35
-background_color_hover = #aaaaaa 10
-border_color_hover = #ffffff 35
-background_color_pressed = #aaaaaa 40
-border_color_pressed = #aaaaaa 40
+background_color = #BABFA1 100
+border_color = #BABFA1 100
+background_color_hover = #BABFA1 50
+border_color_hover = #BABFA1 100
+background_color_pressed = #BABFA1 100
+border_color_pressed = #BABFA1 70
 
 # Background 3: Active task
 rounded = 0
 border_width = 0
 border_sides = B
-background_color = #8DD0C8 75
-border_color = #9DE0D8 100
-background_color_hover = #9DE0D8 70
-border_color_hover = #9DE0D8 70
-background_color_pressed = #9DE0D8 50
-border_color_pressed = #9DE0D8 50
+background_color = #779988 75
+border_color = #779988 100
+background_color_hover = #80A291 70
+border_color_hover = #80A291 70
+background_color_pressed = #80A291 50
+border_color_pressed = #80A291 50
 
 # Background 4: Urgent task
 rounded = 0
 border_width = 0
 border_sides = B
-background_color = #E4A9A7 100
-border_color = #E4A9A7 100
-background_color_hover = #E4A9A7 100
-border_color_hover = #E4A9A7 100
-background_color_pressed = #E4A9A7 100
-border_color_pressed = #E4A9A7 100
+background_color = #AA5555 100
+border_color = #AA5555 100
+background_color_hover = #AA5555 100
+border_color_hover = #AA5555 100
+background_color_pressed = #AA5555 100
+border_color_pressed = #AA5555 100
 
 # Background 5: Tooltip
 rounded = 0
 border_width = 0
 border_sides = B
-background_color = #ffffaa 40
-border_color = #ffffff 100
-background_color_hover = #ffffaa 40
-border_color_hover = #000000 40
-background_color_pressed = #ffffaa 40
-border_color_pressed = #000000 40
+background_color = #BABFA1 100
+border_color = #BABFA1 100
+background_color_hover = #BABFA1 100
+border_color_hover = #BABFA1 100
+background_color_pressed = #BABFA1 100
 
 # Background 6: 
 rounded = 0
 border_width = 0
 border_sides = B
-background_color = #ffffff 50
-border_color = #89D8D0 70
-background_color_hover = #ffffff 30
-border_color_hover = #ffffff 30
-background_color_pressed = #ffffff 30
-border_color_pressed = #ffffff 30
+background_color = #EEF1E1 100
+border_color = #EEF1E1 75
+background_color_hover = #EEF1E1 75
+border_color_hover = #EEF1E1 75
+background_color_pressed = #EEF1E1 75
+border_color_pressed = #EEF1E1 75
 
 # Background 7:
 rounded =0
 border_width = 0
 border_sides =B
-background_color = #ffffff 0
-border_color = #ffffff 0
-background_color_hover = #ffffff 0
-border_color_hover = #ffffff 0
-background_color_pressed = #ffffff 0
-border_color_pressed = #ffffff 0
+background_color = #CFD2C2 100
+border_color = #CFD2C2 100
+background_color_hover = #CFD2C2 100
+border_color_hover = #CFD2C2 100
+background_color_pressed = #CFD2C2 100
+border_color_pressed = #CFD2C2 100
 # Background 8
 rounded = 0
 border_width = 0
 border_sides = B
-background_color = #71C2BA 70
+background_color = #878B47 70
 #-------------------------------------
 # Background 9
 rounded = 0
 border_width = 0
 border_sides = B
-background_color = #5CAAA3 70
+background_color = #656537 70
 #-------------------------------------
 # Background 10
 rounded = 0
 border_width = 0
 border_sides = B
-background_color = #8AD9D1 70
+background_color = #A8AB6D 70
 
 # Panel
 panel_items = TSEEEEECP
@@ -138,7 +137,7 @@ taskbar_always_show_all_desktop_tasks = 0
 taskbar_name_padding = 4 2
 taskbar_name_background_id = 0
 taskbar_name_active_background_id = 0
-taskbar_name_active_font_color = #5CAAA3 100
+taskbar_name_active_font_color = #557766 100
 taskbar_name_font = FontAwesome bold 12.5
 taskbar_distribute_size = 0
 taskbar_sort_order = none
@@ -148,14 +147,13 @@ task_align = left
 # Task
 task_text = 1
 task_icon = 0
-task_centered = 1
-urgent_nb_of_blink = 100000
+task_centered = 1 urgent_nb_of_blink = 100000 
 task_maximum_size = 115 25
 task_padding = 10 10 10 0
 task_tooltip = 1
 task_font = Inconsolata bold 11
-task_font_color = #ffffff 100
-task_active_font_color = #ffffff 100
+task_font_color = #EDEFDF 100
+task_active_font_color = #EDEFDF 100
 task_background_id = 2
 task_active_background_id = 3
 task_urgent_background_id = 4
@@ -195,17 +193,17 @@ launcher_item_app = /usr/share/applications/google-chrome.desktop
 
 #-------------------------------------
 # Clock
-time1_font=Inconsolata bold 10
+time1_font=Inconsolata Nerd Font bold 10
 time1_format =  | :%H:%M 
 time1_timezone = 
 time2_timezone = 
-clock_font_color = #97D5AA 100
+clock_font_color = #A5C963 100
 clock_padding = 5 0 0
 clock_background_id = 6
 clock_tooltip = %A %B %d %Y
 clock_tooltip_timezone = 
-clock_lclick_command = urxvtc
-clock_rclick_command = 
+clock_lclick_command = bash -c '/home/ciguatera/scripts/clock'
+clock_rclick_command = bash -c '/home/ciguatera/scripts/clock'
 clock_mclick_command = 
 clock_uwheel_command = 
 clock_dwheel_command = 
@@ -226,22 +224,24 @@ execp_command = bash -c 'if [ "$(pidof redshift)" == "" ]; then echo ; else e
 #-------------------------------------
 execp = new
 execp_background_id = 8
-execp_command= mpc status | awk 'NR==2{if($1=="[playing]"){printf "  "}else{printf "  "};$system("s=$(mpc current);echo \"$s \"");exit;}'
+execp_command= mpc status | awk 'NR==2{if($1=="[playing]"){printf "  "}else{printf "  "};$system("s=$(mpc current | cut -c -40);echo \"$s \"");exit;}'
+execp_lclick_command = mpc toggle
+execp_rclick_command = mpc toggle
 execp_interval=3
 execp_continuous=0
-execp_font_color = #ffffff 100
-execp_font =Inconsolata 10
+execp_font_color = #EDEFDF 100
+execp_font =Inconsolata Nerd Font 10
 execp_tooltip= 
 
 #-------------------------------------
 # Executor 2
 execp = new
 execp_background_id = 10
-execp_command = free --mega| awk '/Mem:/ {printf(" RAM:%dMb  ",$3);}'
+execp_command = free --mega| awk '/Mem:/ {printf(" RAM:%dMb ",$3);}'
 execp_interval=5
 execp_has_icon=0
 execp_continuous=0
-execp_font_color = #FFFFFF 100
+execp_font_color = #EDEFDF 100
 execp_font=Inconsolata bold 10
 execp_padding = 0 0 0
 execp_centered = 1
@@ -253,7 +253,7 @@ execp_tooltip=
 # Executor 3
 execp = new
 execp_background_id = 6
-execp_font=Inconsolata bold 10
+execp_font=Inconsolata Nerd Font bold 10
 execp_command = amixer -c 0 sget Master| awk -F"[][]" '/%/ {if($6=="off" || $4=="off"){printf " : X "}else{printf(" %s%s ",":", $2);system("amixer -c 0  set Headphone on &> /dev/null");system("amixer -c 0 set Speaker on &> /dev/null");};print("|");exit;}'
 execp_interval = 1
 execp_has_icon = 0
@@ -265,7 +265,7 @@ execp_rclick_command =
 execp_mclick_command = 
 execp_uwheel_command = 
 execp_dwheel_command = 
-execp_font_color = #97D5AA 100
+execp_font_color = #A5C963 100
 execp_padding = 0 0
 execp_centered = 1
 execp_icon_w = 0
@@ -278,8 +278,8 @@ execp = new
 execp_background_id = 6
 execp_interval=5
 execp_continuous=0
-execp_font_color = #97D5AA 100
-execp_font=Inconsolata bold 10
+execp_font_color = #A5C963 100
+execp_font=Inconsolata Nerd Font bold 10
 execp_tooltip= 
 execp_command= acpi -b | awk -F"[ ,%]" '{if($3=="Discharging"){printf ($5>87)? " : " : ($5>62)? " : " : ($5>37)? " : " : " : ";printf "%d%s ",$5,"%"}else{printf " :%s%s ",$5,"%";};exit;}'
 
@@ -288,15 +288,15 @@ execp_command= acpi -b | awk -F"[ ,%]" '{if($3=="Discharging"){printf ($5>87)? "
 button = new
 button_text =
 button_font = FontAwesome bold 10
-button_font_color = #E4A9A7 100
+button_font_color = #AA5555 100
 button_background_id = 7
 button_centered = 1
 button_padding = 5 0 0
-button_lclick_command= bash -c '/home/ciguatera/scripts/bar | lemonbar -p -g 130x25+1230+35 -B "#DDFFFFFF" -F "#000000" -f FontAwesome 24 |sh'
+button_lclick_command= bash -c '/home/ciguatera/scripts/bar | lemonbar -p -g 130x25+1230+35 -B "#DD80A291" -F "#EDEFDF" -f FontAwesome 24 |sh'
 #-------------------------------------
 # Tooltip
 tooltip_show_timeout = 0.5
 tooltip_hide_timeout = 0.1
 tooltip_padding = 2 2
-tooltip_background_id = 6
-tooltip_font_color = #89D8D0 75
+tooltip_background_id = 5
+tooltip_font_color = #82A493 100
