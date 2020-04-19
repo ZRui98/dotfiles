@@ -1,9 +1,0 @@
-#!/usr/bin/env sh
-tmux has-session -t='music-player'
-if [[ $? -eq 0 ]]; then
-	tmux a -t music-player
-else
-	tmux new-session -d -s music-player 'export TERM=xterm-256color;ncmpcpp'
-	tmux split-window -l 4 -v 'export TERM=xterm-256color;cava' 
-	tmux -2 attach-session -d
-fi

@@ -1,2 +1,0 @@
-#!/usr/bin/env sh
-echo -e "   %{A:poweroff:} \uf011 %{A}%{A:killall lemonbar:} \uf057 %{A}   "

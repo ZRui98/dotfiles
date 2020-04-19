@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "235x7-7+33"
+    geometry = "235x7-7+40"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -41,7 +41,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 7
+    #transparency = 7
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -84,7 +84,7 @@
 
     ### Text ###
 
-    font = Inconsolata 11.5
+    font = Iosevka 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -239,23 +239,23 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#EDEFDF"
-    foreground = "#99BB88"
+    background = "#4a4a4a"
+    foreground = "#556973"
     timeout = 0
     # Icon for notifications with low urgency, uncomment to enable
     icon = 
 
 [urgency_normal]
-    background = "#EDEFDF"
-    foreground = "#99BB88"
+    background = "#4a4a4a"
+    foreground = "#88aa5f"
     timeout = 0
     # Icon for notifications with normal urgency, uncomment to enable
     icon = 
 
 [urgency_critical]
-    background = "#EDEFDF"
-    foreground = "#BB3035"
-    frame_color = "#EDEFDF"
+    background = "#4a4a4a"
+    foreground = "#b05f5f"
+    frame_color = "#4a4a4a"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon

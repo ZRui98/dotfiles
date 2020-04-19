@@ -1,15 +1,15 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 STATE=""
 while :
 do
-    NEW_STATE=$(acpi | awk -F [\ ,] '{print $3}')
+    NEW_STATE=$(acpi | awk -F [\ ,] 'FNR==1 {print $3}')
 	if [ "$NEW_STATE" != "$STATE" ]; then
 		STATE=$NEW_STATE
 		if [ "$STATE" = "Discharging" ]; then
-			light -S 25
+			xbacklight -set 15
 		else 
-			light -S 100
-			notify-desktop "Connected to AC" "$(acpi|awk -F "," '{print $3}')"
+			xbacklight -set 100
+			notify-send "Connected to AC" "$(acpi|awk -F "," '{print $3}')"
 		fi
 	fi
 	sleep 1

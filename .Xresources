@@ -1,29 +1,53 @@
-st.font: 			mononoki NerdFont:pixelsize=13:antialias=true:autohint=true;
-st.opacity: 		255
-st.cwscale: 		0.94
-st.chscale: 		0.82
-st.borderpx: 		2
-st.bold_font: 		1
-st.xfps: 			60
-st.actionfps: 		60
+st.font:		Iosevka NerdFont:style=medium:pixelsize=14:antialias=true:autohint=true;
+st.opacity: 	255
+st.cwscale: 	0.95
+st.chscale: 	0.95
+st.borderpx: 	15
+st.bold_font: 	1
+st.xfps: 		60
+st.actionfps: 	60
+rofi.terminal: 	xst
+twobwm.enable_compton:	true
 
-*.background: 		#EDEFDF
-*.foreground: 		#3E453C
+! -- Title:	bluetype
+! -- Author:	dkeg
+! -- Created:	???
+! -- Modified:	2017
 
-*.color0: 			#28433C
-*.color1:			#BB3035
-*.color2:			#779988
-*.color3:			#7788AA
-*.color4:			#99BB88
-*.color5:			#887733
-*.color6:			#257D33
-*.color7:			#BABFA1
+#define bg		#3A3A3A
+#define fg		#C7C5B9
+#define blk     #282c2c
+#define bblk    #484c4e
+#define red     #b05f5f
+#define bred    #b05f5f
+#define grn     #88aa55
+#define bgrn    #88aa55
+#define ylw     #ccb05f
+#define bylw    #ccb05f
+#define blu     #556973
+#define bblu    #556973
+#define mag     #80807e
+#define bmag    #80807e
+#define cyn     #558888
+#define bcyn    #558888
+#define wht     #c7c5b9
+#define bwht    #f6f7f8
 
-*.color8:			#A5B963
-*.color9:			#DDEE77
-*.color10:			#C9B25C
-*.color11:			#555A45
-*.color12:			#556699
-*.color13:			#BB3035
-*.color14:			#7A6688
-*.color15:			#779988
+*background:   bg  
+*foreground:   fg  
+*color0:      blk  
+*color8:      bblk  
+*color1:      red  
+*color9:      bred  
+*color2:      grn  
+*color10:     bgrn  
+*color3:      ylw  
+*color11:     bylw  
+*color4:      blu  
+*color12:     bblu  
+*color5:      mag  
+*color13:     bmag  
+*color6:      cyn  
+*color14:     bcyn  
+*color7:      wht  
+*color15:     bwht  
