@@ -32,14 +32,20 @@ export LS_COLORS
 
 # git 
 unset SSH_ASKPASS
+export GPG_TTY=$(tty)
 
 # fzf
 if command -v fzf-share >/dev/null; then
 	source "$(fzf-share)/key-bindings.bash"
 fi
 
-if [ -f /etc/bash_completion ]; then
-	. /etc/bash_completion
+# enable bash completion in interactive shells
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -110,7 +116,7 @@ function git_branch {
   fi
 }
 
-PS1="\u\[$COLOR_RED\] >> \[\033[01;34m\]\w"
+PS1="\u\[$COLOR_RED\] >> \[\033[01;33m\]\w"
 PS1+="\[\$(git_color)\]"        # colors git status
 PS1+=" \$(git_branch)"           # prints current branch
 PS1+="\[$COLOR_BLUE\]\[$COLOR_RESET\] "   # '#' for root, else '$'

@@ -1,53 +1,60 @@
-st.font:		Iosevka NerdFont:style=medium:pixelsize=14:antialias=true:autohint=true;
-st.opacity: 	255
-st.cwscale: 	0.95
-st.chscale: 	0.95
-st.borderpx: 	15
-st.bold_font: 	1
-st.xfps: 		60
-st.actionfps: 	60
-rofi.terminal: 	xst
+st.font:				Iosevka NerdFont:style=medium:pixelsize=14:antialias=true:autohint=true;
+st.opacity: 			255
+st.cwscale: 			0.95
+st.chscale: 			0.95
+st.borderpx: 			15
+st.bold_font: 			1
+st.xfps: 				60
+st.actionfps: 			60
+rofi.terminal: 			xst
 twobwm.enable_compton:	true
+Xft.antialias:			1
+Xft.autohint:			0
+Xft.hinting: 			0
+Xft.hintStyle:			hintnone
+Xft.lcdfilter:			lcddefault
+Xft.rgba:				rgb
 
-! -- Title:	bluetype
-! -- Author:	dkeg
+! -- Title:	gruvbox
+! -- Author:	???
 ! -- Created:	???
-! -- Modified:	2017
+! -- Modified:	2020
 
-#define bg		#3A3A3A
-#define fg		#C7C5B9
-#define blk     #282c2c
-#define bblk    #484c4e
-#define red     #b05f5f
-#define bred    #b05f5f
-#define grn     #88aa55
-#define bgrn    #88aa55
-#define ylw     #ccb05f
-#define bylw    #ccb05f
-#define blu     #556973
-#define bblu    #556973
-#define mag     #80807e
-#define bmag    #80807e
-#define cyn     #558888
-#define bcyn    #558888
-#define wht     #c7c5b9
-#define bwht    #f6f7f8
+#define bg		#282828
+#define fg		#ebdbb2
+#define blk     #282828
+#define bblk    #3c3836
+#define red     #cc241d
+/* #define bred    #fb4934 */
+#define bred    #d56d0e
+#define grn     #98971a
+#define bgrn    #b8bb26
+#define ylw     #d79921
+#define bylw    #fabd2f
+#define blu     #458588
+#define bblu    #83a598
+#define mag     #b16286
+#define bmag    #d3869b
+#define cyn     #689d6a
+#define bcyn    #8ec07c
+#define wht     #a89984
+#define bwht    #ebdbb2
 
-*background:   bg  
-*foreground:   fg  
-*color0:      blk  
-*color8:      bblk  
-*color1:      red  
-*color9:      bred  
-*color2:      grn  
-*color10:     bgrn  
-*color3:      ylw  
-*color11:     bylw  
-*color4:      blu  
-*color12:     bblu  
-*color5:      mag  
-*color13:     bmag  
-*color6:      cyn  
-*color14:     bcyn  
-*color7:      wht  
-*color15:     bwht  
+*background:	bg  
+*foreground:	fg  
+*color0:		blk  
+*color8:		bblk  
+*color1:		red  
+*color9:		bred  
+*color2:		grn  
+*color10:		bgrn  
+*color3:		ylw  
+*color11:		bylw  
+*color4:		blu  
+*color12:		bblu  
+*color5:		mag  
+*color13:		bmag  
+*color6:		cyn  
+*color14:		bcyn  
+*color7:		wht  
+*color15:		bwht  
