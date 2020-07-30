@@ -1,0 +1,12 @@
+rofi.lines:10
+rofi.color-normal: #00282828, #ebdbb2, #00ffffff, #00282828, #d65d0e
+rofi.color-urgent: #00282828, #ebdbb2, #00ffffff, #00282828, #d65d0e
+rofi.color-active: #00282828, #ebdbb2, #00ffffff, #00282828, #d65d0e
+rofi.color-window: #ff282828, #ffebdbb2, #ff282828
+rofi.bw:3
+rofi.hide-scrollbar:true
+rofi.sidebar-mode:true
+rofi.font: Monospace 14
+rofi.columns:3
+rofi.width:700
+rofi.padding:20

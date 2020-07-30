@@ -20,13 +20,13 @@ static const uint8_t offsets[] = {0,0,0,0};
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
 static const char *colors[] = {
-	"#c7c5b9", //focuscol
-	"#484c4e", //unfocuscol
-	"#7A8C5C", //fixedcol
-	"#b05f5f", //unkilcol
-	"#c7c5b9", //fixedunkilcol
-	"#3f3f3f", //outerbordercol
-	"#3a3a3a"  //emptycol
+	"#ebdbb2", //focuscol
+	"#504945", //unfocuscol
+	"#98971a", //fixedcol
+	"#cc241d", //unkilcol
+	"#ebdbb2", //fixedunkilcol
+	"#282828", //outerbordercol
+	"#282828"  //emptycol
 };
 /* if this is set to true the inner border and outer borders colors will be swapped */
 static const bool inverted_colors = false;
@@ -46,7 +46,7 @@ static const uint8_t borders[] = {7,10,1,3};
  * attribute of the window. You can test this using `xprop WM_NAME`
  */
 #define LOOK_INTO "WM_NAME"
-static const char *ignore_names[] = {"bar", "xclock", "Zathura", "zathura", "VirtualBox Machine", "browser", "sxiv", "Sxiv", "Advanced REST client", "IntelliJ IDEA", "Firefox", "firefox", "feh", "insomnia", "Insomnia", "spotify", "Spotify", "Spotify Premium",};
+static const char *ignore_names[] = {"bar", "xclock", "Zathura", "zathura", "VirtualBox Machine", "browser", "sxiv", "Sxiv", "Advanced REST client", "IntelliJ IDEA", "Firefox", "firefox", "feh", "insomnia", "Insomnia", "spotify", "Spotify", "Spotify Premium","google-chrome","Google-chrome"};
 ///--Menus and Programs---///
 /* static const char *menucmd[]   = { "", NULL }; */
 static const char *rofir[]   		= { "/home/ciguatera/scripts/rofi.sh", "-r", NULL };
@@ -57,6 +57,8 @@ static const char *toggle_vol[]   	= { "/home/ciguatera/scripts/sound.sh", "-m",
 static const char *bright_up[]   	= { "/home/ciguatera/scripts/backlight.sh", "-i", NULL };
 static const char *bright_down[]   	= { "/home/ciguatera/scripts/backlight.sh", "-d", NULL };
 static const char *toggle_bars[]   	= { "/home/ciguatera/scripts/bars.sh", NULL };
+static const char *printscr[]   	= { "/home/ciguatera/scripts/printscr.sh", NULL };
+static const char *open_url[]   	= { "/home/ciguatera/scripts/open_url.sh", NULL };
 static const char *toggle_play[]   	= { "mpc","toggle", NULL };
 static const char *prev_play[]   	= { "mpc","prev", NULL };
 static const char *next_play[]   	= { "mpc","next", NULL };
@@ -215,6 +217,7 @@ static key keys[] = {
     /* {  MOD ,              XK_w,          					start,             	{.com = menucmd}}, */
     {  ALT ,              XK_space,      					start,             	{.com = rofir}},
     {  MOD ,              XK_t,          					start,             	{.com = term}},
+    {  MOD ,              XK_o,          					start,             	{.com = open_url}},
     {  MOD ,              XK_q,          					start,             	{.com = toggle_bars}},
     {  0 ,                XF86XK_AudioLowerVolume,          start,            	{.com = vol_down}},
     {  0 ,                XF86XK_AudioRaiseVolume,          start,             	{.com = vol_up}},
@@ -222,6 +225,7 @@ static key keys[] = {
     {  0 ,                XF86XK_MonBrightnessUp,           start,             	{.com = bright_up}},
     {  0 ,                XF86XK_MonBrightnessDown,         start,             	{.com = bright_down}},
     {  0 ,                XK_Pause,          				start,             	{.com = toggle_play}},
+    {  0 ,                XK_Print,          				start,             	{.com = printscr}},
     {  CONTROL ,          XK_comma,          				start,             	{.com = prev_play}},
     {  CONTROL ,          XK_period,          				start,             	{.com = next_play}},
     // Exit or restart 2bwm

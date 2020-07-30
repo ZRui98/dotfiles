@@ -2,13 +2,13 @@
 
 while :
 do
-	NETWORK_NAME=$(nmcli | grep -wEo 'wlp3s0: connected to \w+[-_]?\w+'| awk '{printf "%-14s", $4}'| xargs)
+	NETWORK_NAME=$(/sbin/iwgetid | grep -wEo '"\w+[-_]?\w+"' | cut -d '"' -f 2)
 	# NETWORK_NAME="BELL230"
 
 	PAD=$(printf '%0.1s' "A"{1..100})
-	PADLENGTH=17
+	PADLENGTH=18
 	PADSIZE=$(((PADLENGTH-${#NETWORK_NAME})/2-1))
-	OUTPUT=$(printf '%%{B#d9d8d4}%%{F#d9d8d4}%*.*s%%{F#7b6072}%s%%{F#d9d8d4}%*.*s' 0 "$PADSIZE" "$PAD" "$NETWORK_NAME" 0 "$PADSIZE" "$PAD")
+	OUTPUT=$(printf '%%{B#ebdbb2}%%{F#ebdbb2}%*.*s%%{F#282828}%s%%{F#ebdbb2}%*.*s' 0 "$PADSIZE" "$PAD" "$NETWORK_NAME" 0 "$PADSIZE" "$PAD")
 	echo -e "$OUTPUT"
 	sleep 5
 done
